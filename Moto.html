@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <title>UrbanMarket</title>
+    <link rel="icon" href="img/urbanicon.png">
+</head>
+
+<body>
+    <header>
+        <a href="/index.html">
+            <img src="img/Screenshot_5.png" alt="Logo">
+        </a>
+        <input type="text" placeholder="Pesquisar...">
+
+        <div class="icones-header">
+            <a href="#" id="abrirLogin">
+                <img src="img/login.png" alt="Login">
+            </a>
+            <a href="#favoritos">
+                <img src="img/favoritos.png" alt="Favoritos">
+            </a>
+            <a href="carrinho.html">
+                <img src="img/carrinho.png" alt="Carrinho">
+            </a>
+            <button id="toggleTheme" class="theme-toggle" aria-label="Modo escuro">🌙</button>
+        </div>
+    </header>
+    <!-- Overlay e popup de login -->
+    <div id="overlay"></div>
+
+    <div id="loginPopup">
+        <div class="loginContent">
+            <span id="fecharPopup">&times;</span>
+
+            <!-- Área de login -->
+            <div class="formBox" id="loginForm">
+                <h2>Entrar</h2>
+                <form>
+                    <input type="text" placeholder="Usuário" required>
+                    <input type="password" placeholder="Senha" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Não tem conta? <a href="#" id="mostrarCadastro">Criar conta</a></p>
+            </div>
+
+            <!-- Área de cadastro -->
+            <div class="formBox" id="cadastroForm" style="display:none;">
+                <h2>Criar conta</h2>
+                <span id="message"></span>
+                <form>
+
+
+
+                    <label for="nome">Nome completo:</label>
+
+                    <input type="text" id="nome" name="nome" required pattern="[a-zA-Z\u00C0-\u00FF\s]+">
+
+
+
+
+                    <label for="dataNascimento">Data de Nascimento:</label>
+
+                    <input type="date" id="dataNascimento" name="dataNascimento" required>
+
+
+
+                    <label for="email">E-mail:</label>
+
+                    <input type="email" id="email" name="email" required>
+
+
+
+                    <label for="senha">Senha:</label>
+
+                    <input type="password" id="senha" name="senha" minlength="6" required>
+
+
+
+                    <label for="cep">CEP:</label>
+
+                    <input type="text" id="cep" name="cep" maxlength="9" required>
+
+
+
+                    <label for="logradouro">Rua/Logradouro:</label>
+
+
+                    <input type="text" id="logradouro" name="logradouro" readonly> <label for="bairro">Bairro:</label>
+
+                    <input type="text" id="bairro" name="bairro" readonly>
+
+
+
+                    <label for="cidade">Cidade:</label>
+
+                    <input type="text" id="cidade" name="cidade" readonly>
+
+
+
+                    <button type="submit">Cadastrar</button>
+
+                </form>
+                <p>Já tem conta? <a href="#" id="mostrarLogin">Entrar</a></p>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="nav-inner">
+            <ul>
+                <li><a href="#">Roupas</a>
+                    <ul>
+                        <li><a href="#">Masculinas</a></li>
+                        <li><a href="#">Femininas</a></li>
+                        <li><a href="#">Infantil</a></li>
+                        <li><a href="#">Moda Sustentável</a></li>
+                        <li><a href="#">Ofertas da Semana</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Saúde</a>
+                    <ul>
+                        <li><a href="#">Academia</a></li>
+                        <li><a href="#">Bem-estar</a></li>
+                        <li><a href="#">Desenvolvimento Pessoal</a></li>
+                        <li><a href="#">Vitaminas e Suplementos</a></li>
+                        <li><a href="#">Suporte e Consultas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Eletrônicos</a>
+                    <ul>
+                        <li><a href="#">Celulares e Acessórios</a></li>
+                        <li><a href="#">Computadores e Notebooks</a></li>
+                        <li><a href="#">Hardware</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Smart Home</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Casa</a>
+                    <ul>
+                        <li><a href="#">Eletrodomésticos</a></li>
+                        <li><a href="#">Decoração</a></li>
+                        <li><a href="#">Móveis</a></li>
+                        <li><a href="#">Organização</a></li>
+                        <li><a href="#">Jardim</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Esportes</a>
+                    <ul>
+                        <li><a href="#">Academia</a></li>
+                        <li><a href="#">Ao Ar Livre</a></li>
+                        <li><a href="#">Times e Clubes</a></li>
+                        <li><a href="#">Acessórios</a></li>
+                        <li><a href="#">Esportes Aquáticos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Auto</a>
+                    <ul>
+                        <li><a href="#">Peças e Acessórios</a></li>
+                        <li><a href="#">Manutenção</a></li>
+                        <li><a href="#">Limpeza Automotiva</a></li>
+                        <li><a href="#">Segurança</a></li>
+                        <li><a href="#">Auto Tech</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+
+            <div class="produto-container">
+
+                <!-- =========================== -->
+                <!--        SLIDE À ESQUERDA     -->
+                <!-- =========================== -->
+                <div class="produto-slider">
+
+                    <!-- Imagem principal -->
+                    <div class="slider-main">
+                        <img id="mainImage" src="img/Catalog Itens/Moto.jpg" alt="Imagem Principal">
+
+                        <button class="nav prev" id="prevBtn">❮</button>
+                        <button class="nav next" id="nextBtn">❯</button>
+                    </div>
+
+                    <!-- Miniaturas -->
+                    <div class="slider-thumbs">
+                        <img class="thumb active" src="img/Catalog Itens/Moto.jpg" data-index="0">
+                        <img class="thumb" src="img/Catalog Itens/moto2.jpg" data-index="1">
+                        <img class="thumb" src="img/Catalog Itens/moto3.jpg" data-index="2">
+                        <img class="thumb" src="img/Catalog Itens/moto4 (1).jpg" data-index="3">
+                        <img class="thumb" src="img/Catalog Itens/moto5.jpg" data-index="4">
+                    </div>
+                </div>
+
+
+                <!-- =========================== -->
+                <!--     INFORMAÇÕES À DIREITA   -->
+                <!-- =========================== -->
+                <div class="produto-info">
+
+                    <h1 class="produto-nome">Moto Honda</h1>
+
+                    <p class="produto-preco2">R$ 15.850,00</p>
+
+                    <span class="produto-frete">Frete grátis</span>
+
+                    <p class="produto-parcela2">em até 5x de R$ 1.320,83 sem juros</p>
+
+                    <p class="produto-vista2">R$ 15.500,00 à vista no Pix</p>
+
+                    <button class="btn-comprar">Comprar Agora</button>
+
+                </div>
+
+            </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script src="script.js"></script>
+    </main>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="footerConteudo">
+                <h4>Sobre nós</h4>
+                <p>UrbanMarket - Sua loja online de confiança. Oferecemos os melhores produtos com qualidade e preços
+                    acessíveis.</p>
+            </div>
+            <div class="footerConteudo">
+                <h4>Contato</h4>
+                <p>Email: contato@urbanmarket.com</p>
+                <p>Telefone: (11) 9999-9999</p>
+            </div>
+            <div class="footerConteudo">
+                <h4>Links úteis</h4>
+                <a href="#">Política de privacidade</a>
+                <a href="#">Termos de uso</a>
+                <a href="#">Ajuda</a>
+            </div>
+            <div class="footerConteudo">
+                <h4>Redes Socias</h4>
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="footerFinal">
+            <p>UrbanMarket. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <div id="favoritos" class="aba-favoritos">
+        <a href="#" class="fechar">✖</a>
+        <h3>⭐ Meus Favoritos</h3>
+        <p class="mensagem-vazia">Você ainda não adicionou nenhum favorito.</p>
+    </div>
+
+    <!-- POPUP CUPOM -->
+    <div id="cupomOverlay"></div>
+    <div id="cupomPopup">
+        <div class="cupomContent">
+            <span id="fecharCupom">&times;</span>
+            <h2>🎉 Cupom Especial!</h2>
+            <p>Use o cupom <strong>DESCONTO10</strong> e ganhe 10% OFF na sua compra!</p>
+            <button id="usarCupom">Usar agora</button>
+        </div>
+    </div>
+    <script> src = "script.js"</script>
+</body>
+
+</html>
