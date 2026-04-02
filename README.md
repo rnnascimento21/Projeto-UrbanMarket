@@ -1,5 +1,5 @@
 # 🛒 Projeto Urban Market
-
+### 🔗 [Acesse o site online clicando aqui](https://rnnascimento21.github.io/Projeto-UrbanMarket/)
 ![Thumbnail do Projeto](img/img.projeto.PNG)
 
 Este repositório é um marco especial: ele contém o **meu primeiro projeto** desenvolvido no mundo da programação web! Decidi mantê-lo exatamente como foi criado para documentar o início da minha jornada e minha evolução técnica.
