@@ -1,26 +1,25 @@
-# 🛒 Projeto Urban Market - Meu Primeiro Passo no Web Design
+# 🛒 Projeto Urban Market
 
-Este repositório marca o início da minha jornada no desenvolvimento de software. Decidi manter este código exatamente como foi concebido originalmente para documentar meu aprendizado inicial e evolução técnica.
+![Thumbnail do Projeto](img/Screenshot_5.png)
+
+Este repositório é um marco especial: ele contém o **meu primeiro projeto** desenvolvido no mundo da programação web! Decidi mantê-lo exatamente como foi criado para documentar o início da minha jornada e minha evolução técnica.
 
 ---
 
 ### 📝 Sobre o Projeto
-O **Urban Market** é um protótipo de e-commerce (marketplace) funcional. O foco foi criar uma interface de navegação simples onde o usuário pode visualizar diferentes categorias de produtos, desde eletrônicos até itens de confeitaria.
+O **Urban Market** é uma simulação de e-commerce. O objetivo foi aprender a estruturar páginas, conectar links e organizar um catálogo de produtos variado, incluindo eletrônicos, veículos e utilitários.
 
-### 🛠️ Tecnologias e Conceitos Aplicados:
-* **HTML5:** Estruturação de múltiplas páginas integradas (`index`, `carrinho`, `detalhes`).
-* **CSS3:** Estilização visual, cores e layout.
-* **JavaScript:** Primeiras lógicas de interação com o usuário.
-* **Navegação:** Links internos conectando páginas de produtos específicos como `Moto.html`, `Notebook.html` e `AirFrayer.html`.
+### 🛠️ Tecnologias que utilizei:
+* **HTML:** Para criar a estrutura e os textos de todas as páginas.
+* **CSS:** Para dar cor, estilo e identidade visual ao site.
+* **JavaScript:** Para as primeiras interações lógicas do sistema.
 
-### 📂 Estrutura do Repositório
-- `/img`: Pasta com todos os assets visuais.
-- `index.html`: Página principal da vitrine.
-- `carrinho.html`: Interface de simulação de compras.
-- `style.css`: Toda a identidade visual centralizada.
+### 📂 Estrutura de Arquivos:
+- `index.html`: A vitrine principal do mercado.
+- `carrinho.html`: Interface de simulação de checkout.
+- `AirFrayer.html`, `Moto.html`, `Notebook.html`: Páginas detalhadas de cada produto.
+- `script.js` e `style.css`: Arquivos de lógica e estilização.
 
 ---
-
-> "Este projeto é o meu 'Hello World' no mundo do Front-end. Ele representa o momento em que transformei linhas de código em uma interface real e navegável."
-
+> "Este projeto representa o meu ponto de partida. Ele demonstra como aprendi a organizar arquivos e criar uma navegação fluida entre diferentes páginas de um site."
 ---
