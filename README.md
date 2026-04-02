@@ -1,6 +1,6 @@
 # 🛒 Projeto Urban Market
 
-![Thumbnail do Projeto](img/img.docx)
+![Thumbnail do Projeto](img/img.projeto)
 
 Este repositório é um marco especial: ele contém o **meu primeiro projeto** desenvolvido no mundo da programação web! Decidi mantê-lo exatamente como foi criado para documentar o início da minha jornada e minha evolução técnica.
 
